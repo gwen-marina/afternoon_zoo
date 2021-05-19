@@ -21,4 +21,13 @@ class Zoo
     @animal_count +=1
   end
 
+  def animals_older_than(weeks)
+    inventory.select { |animal| animal.age_in_weeks > weeks }
+  end
+
+  def details
+    { "total_weight" => inventory.sum { |animal| animal.weight_as_integer} ,
+      "street_address" => street }
+  end
+
 end

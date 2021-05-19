@@ -12,8 +12,16 @@ class Animal
     @weight.to_s + " pounds"
   end
 
+  def weight_as_integer
+    @weight
+  end
+  
   def age
     @age.to_s + " weeks"
+  end
+
+  def age_in_weeks
+    @age
   end
 
   def age_in_days
