@@ -30,4 +30,15 @@ class Zoo
       "street_address" => street }
   end
 
+  def animals_sorted_by_weight
+    inventory.sort_by { |animal| -animal.weight_as_integer }
+  end
+
+  def animal_hash
+    animal_hash = Hash.new
+    inventory.each { |animal| animal_hash[animal.first_letter] = [] }
+    (animals_sorted_by_weight.reverse).map { |animal| animal_hash[animal.first_letter] = (animal_hash[animal.first_letter] << animal) }
+    animal_hash
+  end
+
 end

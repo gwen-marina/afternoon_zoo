@@ -15,7 +15,7 @@ class Animal
   def weight_as_integer
     @weight
   end
-  
+
   def age
     @age.to_s + " weeks"
   end
@@ -30,6 +30,10 @@ class Animal
 
   def feed!(number)
     @weight += number
+  end
+
+  def first_letter
+    kind[0]
   end
 
 end
