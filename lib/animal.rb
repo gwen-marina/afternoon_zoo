@@ -1,6 +1,6 @@
 class Animal
 
-  attr_reader :kind, :weight, :age
+  attr_reader :kind
 
   def initialize(kind, weight, age)
     @kind = kind
@@ -9,7 +9,7 @@ class Animal
   end
 
   def weight
-    @weight.to_s + " pounds"
+    "#{@weight} pounds"
   end
 
   def weight_as_integer
@@ -17,7 +17,7 @@ class Animal
   end
 
   def age
-    @age.to_s + " weeks"
+    "#{@age} weeks"
   end
 
   def age_in_weeks
@@ -25,7 +25,7 @@ class Animal
   end
 
   def age_in_days
-    (@age * 7)
+    @age * 7
   end
 
   def feed!(number)
